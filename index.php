@@ -51,6 +51,23 @@
     ?>
     <!-- task2.1 -->
     <!-- Sukurti du kintamuosius. Jiems priskirti savo mylimo aktoriaus vardą ir pavardę kaip stringus (Jonas Jonaitis). Atspausdinti trumpesnį stringą. -->
-    
+    <?php
+    $actorName = "Robert";
+    $actorSurname = "De Niro";
+    if (strlen($actorName) < strlen($actorSurname)) {
+        // console.log(string1);
+        echo ($actorName);
+    }
+    if (strlen($actorName) > strlen($actorSurname)){
+        // console.log(string2);
+        echo ($actorSurname);
+    }
+    echo("<br>")
+    ?>
+    <!-- task2.2 -->
+    <!-- Sukurti du kintamuosius. Jiems priskirti savo mylimo aktoriaus vardą ir pavardę kaip stringus. Vardą atspausdinti tik didžiosiom raidėm, o pavardę tik mažosioms. (LEONARDO dicaprio) -->
+    <?php
+    echo strtoupper($actorName), strtolower($actorSurname)
+    ?>
 </body>
 </html>
