@@ -22,6 +22,7 @@
     $currentYear = "2022";
     $result = $currentYear - $birthYear;
     echo "Aš esu $name $surname. Man yra $result metai(ų).";
+    echo "<br>"
     ?>
     <!-- task1.2 -->
     <!-- Naudokite funkcija Math.random(). Sukurkite du kintamuosius ir naudodamiesi funkcija Math.random() jiems priskirkite atsitiktines reikšmes nuo 0 iki 4 (sveiki skaičiai). Didesnę reikšmę padalinkite iš mažesnės. Atspausdinkite rezultatą jį suapvalinę iki 2 skaičių po kablelio. -->
@@ -31,10 +32,25 @@
     if ($num1 > $num2 && ($num1 !== $num2 || $num1 !== 0 && $num2 !== 0)) { 
         // console.log(($num1 / $num2).toFixed(2)); 
         echo "$num1";
-    } else {
+    } 
+    if ($num1 < $num2 && ($num1 !== $num2 || $num1 !== 0 && $num2 !== 0)){
         // console.log(($num2 / $num1).toFixed(2));
         echo "$num2";
     }
+    echo "<br>"
     ?>
+    <!-- task1.3 -->
+    <!-- Naudokite funkcija Math.random(). Sukurkite tris kintamuosius ir naudodamiesi funkcija Math.random() jiems priskirkite atsitiktines reikšmes nuo 0 iki 25 (sveiki skaičiai). Raskite ir atspausdinkite kintąmąjį turintį vidurinę reikšmę. -->
+    <?php
+    $num3 = rand(0,25);
+    $num4 = rand(0,25);
+    $num5 = rand(0,25);
+    $middle = $num3 + $num4 + $num5 - min($num3, $num4, $num5) - max($num3, $num4, $num5);
+        echo ($middle);
+    echo "<br>"
+    ?>
+    <!-- task2.1 -->
+    <!-- Sukurti du kintamuosius. Jiems priskirti savo mylimo aktoriaus vardą ir pavardę kaip stringus (Jonas Jonaitis). Atspausdinti trumpesnį stringą. -->
+    
 </body>
 </html>
