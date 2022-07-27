@@ -67,7 +67,35 @@
     <!-- task2.2 -->
     <!-- Sukurti du kintamuosius. Jiems priskirti savo mylimo aktoriaus vardą ir pavardę kaip stringus. Vardą atspausdinti tik didžiosiom raidėm, o pavardę tik mažosioms. (LEONARDO dicaprio) -->
     <?php
-    echo strtoupper($actorName), strtolower($actorSurname)
+    echo strtoupper($actorName). strtolower($actorSurname);
+    echo ("<br>")
+    ?>
+    <!-- task2.3 -->
+    <!-- Sukurti du kintamuosius. Jiems priskirti savo mylimo aktoriaus vardą ir pavardę kaip stringus. Sukurti trečią kintamąjį ir jam priskirti stringą, sudarytą iš pirmų vardo ir pavardės kintamųjų raidžių. Jį atspausdinti. -->
+    <?php
+    // $initials = $actorName[0] $actorSurname[0];
+    $initials = substr($actorName, 0, 1). substr($actorSurname, 0, 1);
+    echo $initials;
+    echo "<br>"
+    ?>
+    <!--task2.4 -->
+    <!--Sukurti du kintamuosius. Jiems priskirti savo mylimo aktoriaus vardą ir pavardę kaip stringus. Sukurti trečią kintamąjį ir jam priskirti stringą, sudarytą iš trijų paskutinių vardo ir pavardės kintamųjų raidžių. Jį atspausdinti.  -->
+    <?php
+    $string = substr($actorName, 0, 3). substr($actorSurname, 0, 3);
+    echo $string;
+    echo("<br>")
+    ?>
+    <!--task2.5-->
+    <!--Sukurti kintamąjį su stringu: “An American in Paris”. Jame visas “a” (didžiąsias ir mažąsias) pakeisti žvaigždutėm “*”.  Rezultatą atspausdinti. -->
+    <?php
+    $string2 = "An American in Paris";
+    // echo $string2;
+    echo str_replace("A","*",$string2)
+    ?>
+    <!-- task3.1 -->
+    <!-- Sugeneruokite 300 atsitiktinių skaičių nuo 0 iki 300, atspausdinkite juos atskirtus tarpais ir suskaičiuokite kiek tarp jų yra didesnių už 150.  Skaičiai didesni nei 275 turi būti atspausdinti skliausteliuose” [ ] “. -->
+    <?php
+    
     ?>
 </body>
 </html>
