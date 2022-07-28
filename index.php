@@ -83,19 +83,80 @@
     <?php
     $string = substr($actorName, 0, 3). substr($actorSurname, 0, 3);
     echo $string;
-    echo("<br>")
+    echo("<br>");
     ?>
     <!--task2.5-->
     <!--Sukurti kintamąjį su stringu: “An American in Paris”. Jame visas “a” (didžiąsias ir mažąsias) pakeisti žvaigždutėm “*”.  Rezultatą atspausdinti. -->
     <?php
     $string2 = "An American in Paris";
     // echo $string2;
-    echo str_replace("A","*",$string2)
+    echo str_replace(["A","a"],"*",$string2);
+    echo ("<br>");
     ?>
     <!-- task3.1 -->
     <!-- Sugeneruokite 300 atsitiktinių skaičių nuo 0 iki 300, atspausdinkite juos atskirtus tarpais ir suskaičiuokite kiek tarp jų yra didesnių už 150.  Skaičiai didesni nei 275 turi būti atspausdinti skliausteliuose” [ ] “. -->
     <?php
-    
+    $randomNums = "";
+    $count = 0;
+    for ($i = 0; $i < 300; $i++) {
+        $random = rand(0, 300);
+        if ($random > 250) {
+            $count++;
+        }
+        if ($random > 275) {
+            $randomNums .= "[" . $random . "] ";
+        }
+        if ($random < 276) {
+            $randomNums .= $random . " ";
+        }
+    }
+    echo ("<h3>Iš viso: " . $count . " skaičių iš 300 </h3>" . $randomNums);
+    echo"<br>";
+    echo"<br>";
+    ?>
+    <!-- task3.2 -->
+    <!-- Vienoje eilutėje atspausdinkite visus skaičius nuo 1 iki 3000, kurie dalijasi iš 77 be liekanos. Skaičius atskirkite kableliais. Po paskutinio skaičiaus kablelio neturi būti. -->
+    <?php
+    $text1 = "";
+     for ($u = 77; $u < 3000; $u+= 77) {
+         $text1 .= $u . ",";
+    } 
+    echo (substr($text1, 0, -2));
+    echo"<br>";
+    echo"<br>";
+    ?>
+    <!-- task3.3 -->
+    <!-- Nupieškite kvadratą iš “*”, kurio kraštines sudaro 100 “*”. -->
+    <?php
+    for ($i=0; $i < 10; $i++) { 
+        $square = "";
+        for ($a=0; $a < 10; $a++) { 
+            $square .= "*";
+        }
+        echo ($square."</p>");
+    }
+    echo"<br>";
+    echo"<br>";
+    ?>
+    <!-- task4.1 -->
+    <!-- Parašykite funkciją, kurios argumentas būtų tekstas, kuris yra įterpiamas į h1 tagą; -->
+    <?php
+    function func1($string3)
+    {
+        echo ("<h1>" . $string3 . "</h1>");
+    }
+    func1("Sup!");
+    echo"<br>";
+    echo"<br>";
+    ?>
+    <!-- task4.2 -->
+    <!-- Parašykite funkciją su dviem argumentais, pirmas argumentas tekstas, įterpiamas į h tagą, o antrasis tago numeris (1-6). Rašydami šią funkciją remkitės pirmame uždavinyje parašytą funkciją;
+ -->
+    <?php
+    function func2($string3, $num) {
+        echo "<h".$num.">" . $string3 . "</h".$num.">";
+    }
+    func2("Labujkas", 1);
     ?>
 </body>
 </html>
